@@ -121,7 +121,9 @@ class SolverHuntMain(Frame):
             htmltext=''
             for j in char_list:
                 htmltext=htmltext+j
-
+            f = open("extractedText.txt", "w",encoding="utf8")
+            f.write(str(htmltext))
+            f.close()
         self.textData.insert(INSERT,htmltext)
 
 def main():
