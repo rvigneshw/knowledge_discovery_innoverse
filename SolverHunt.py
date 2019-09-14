@@ -62,7 +62,9 @@ class SolverHuntMain(Frame):
         self.quit()
 
     def gotoNextWindow(self):
+        call(["python", "generateSearchQueries.py"])
         call(["python", "parsedKeywordsWindow.py"])
+        return
 
     def deleteDataFromTextBox(self):
         if(self.textData.get(INSERT)!=""):
@@ -72,7 +74,7 @@ class SolverHuntMain(Frame):
         print("called demo")
         # with open("statement.html","rb") as url:
         raw = BeautifulSoup(open("wiki.html",encoding="utf8"))
-        print(raw.find_all('p'))
+        # print(raw.find_all('p'))
         soup=raw.find_all('p')
         htmlData=''
         for data in soup:

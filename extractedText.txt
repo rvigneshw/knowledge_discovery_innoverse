@@ -1,90 +1,17 @@
-Problem Statement
-Problem Statement
-STARS Project
-15-499c Advanced Software Engineering
-Spring 2000
-Carnegie Mellon University
-Pittsburgh, PA 15213
-Introduction
-With the increasing complexity of systems such as automobiles, trucks, airplanes, trains or power plants, access to maintenance procedures at the place of work is essential. Current maintenance procedures for these systems are costly and inefficient. Information quickly goes out-of-date and maintenance manuals are often only available as hardcopy.
-This results in an extreme amount of wasted paper as well as transportation difficulties.
-The Problem
-The F/A-18 "Hornet" Program Office, PMA-265, has been asked to reduce the cost for logistics support and maintenance while improving or at least maintaining current aircraft readiness.
-The cost of electronic data required for the aircraft, especially when it has already been authored in a proprietary format or is available only in paper form, is enormous. Some solutions to the problem of reducing costs are available. For example, an Automated Conversion System (ACS), when coupled to an Interactive Electronic Technical Manual (IETM) authoring tool, lowers technical manual conversion cost significantly.
-This process has allowed the program office to lower by more than 33% the cost of converting its F/A-18 C and D organizational-level technical manuals to IETMs. However, the program office cannot afford to do the same for F/A-18 A and B technical manuals and related data (e.g., logbooks) because they are all paper-based documents, i.e., not available in electronic form.
-IETM authoring is also done by the OEMs and Boeing (for the aircraft itself) using a standard authoring system and data direct from the engineering CAD systems used in the manufacturing design process.
-Proposal
-In this project we are asking you to build a system called STARS. STARS attempts to reduce the cost of converting paper based technical manuals to IETMs.
-To address the problem, we propose the improvement of the conversion process converning the development and managment of interactive electronic technical manuals.
-The process of developing and managing of IETMs itself consists of three activities: 1) authoring of IETMs from the paper technical manuals, 2) storage of IETMs in a database and 3) authoring and release workflow management.
-The authoring of IETMs from paper documents is to be done in two stages. The digitizing stage is to be done by and American Native firms (West Electronics). They will use text and graphic conversion tools and apply QC techniques to produce electronic data, which is then converted via IETM authoring systems. The White House, Congress, and the Native American Marketing Corporation (NAMCOR) are backing this effort to provide meaningful employment for and American Natives without leaving their current communities.
-Scenarios
-Preliminary Analysis
-A preliminary analysis of the problem has already been performed which has resulted in a set of functional and nonfunctional requirements describing the functions to be performed by the system and a list of system limitations outlining specific constraints.
-We expect that the requirements will undergo several incremental and iterative changes as a result of the analysis phase.
-Functional Requirements
-The STARS System must support the following functions:
-Create IETMs from technical manuals
-Provide a web-based display tools for IETMs
-Interface to ACS
-Interface to GCS
-Interface to AIMSS
-Provide a review and quality control process for IETM documents
-Submit IETM documents to a IETM database, thus implementing Class V IETMs
-Nonfunctional Requirements
-When designing STARS, the following constraints must be taken into account:
-STARS must provide concurrent access by multiple users, accessing the system locally and remotely. STARS applications run independently from each other as separate processes, while still allowing the applications to communicate with each other.
-Any new code written as part of this development effort must be platform independent.
-Model-based software engineering techniques have to be used. The application domain must be modeled with UML.
-The system design and implementation must be derived from the UML models developed during the analysis phase.
-System Limitations
-When designing STARS, the following will be true of the developed system:
-The STARS System is a conversion process.
-Any use otherwise is not supported.
-STARS will not be able to detect technical errors in the Paper Technical Manuals themselves.
-Therefore any errors that existed prior to the digitization process will still exist in the IETM produced.
-The final demonstration of the STARS system will only succeed pending the release of the conversion tool from AIMSS 3.2 to AIMSS 4.0 developed by Raytheon.
-If that tool is unavailable, it will be impossible to demonstrate the full functionality of the STARS system.
-Target Environment
-It is expected that the development environment at Carnegie Mellon will be used for demonstrating the prototype.
-The target environment will be the reservation in Montana where West Electronics is located.
-The system will run on desktop machines.
-Development Environment
-The developers of the STARS System may make use of the facilities offered in the clusters on the CMU Campus as well as the Software Engineering Laboratory located in Smith Hall, room 234. While the clusters are shared with other students taking other courses, the resources at the software engineering lab are to be used solely for the development of the STARS System. The Software Engineering Laboratory offers a set of 9 PCs running Windows NT and Linux as well as 6 Macintosh running MacOS 8.6. These machines are connected via a local Ethernet. The following software tools are used during development.
-Lotus Notes.
-This is a groupware tool, designed to facilitate communication between members of a large, geographically diverse group working on the same project. It provides persistent document storage and address book functionality. Inherent security features allow content to be provided over the Internet, with complex permission options.
-JavaDoc.
-This tool generates API documentation from the comments of Java source code. The documentation is provided in HTML format.
-ACS
-ACS (Automated Conversion System) converts legacy technical manuals into IETMs. ACS consists of a series of automated steps that minimize the human interaction necessary to convert paper-based documents into IETMs. More information on ACS can be found at http://www.lmco.com:80/lmis/level4/acs.html.
-GCS
-GCS (Graphical Conversion System) converts the images and tables from legacy technical manuals into parsable SGML which can then be incorporated into ACS (see above) to provide the full conversion of the technical manual.
-Both GCS and ACS can convert tables in technical manuals to SGML.
-GCS will be responsible for this conversion in the STARS system.
-AIMSS
-AIMSS (Advanced Integrated Maintenance Support System) is a tool for constructing and authoring IETM databases, maintaining the databases, and using the databases for the delivery of information to a user. The AIMSS authoring environment provides the tools used to create, delete, modify, and maintain all aspects of an IETM database development project. More information on AIMSS can be found at http://www.htsc.com/AIMSS/AIMSS.HTML.
-Contacts
-The clients for the project are Lt. Matt Herl from the F-18 program office, Mark Kramer and Raymond LeBeau from the Navy Carderock Lab. The client liaison is Dick Martin from Carnegie Mellon University.
-Consultants for some of the problems associated with the subsystems and development tools are also available. The consultants are:
-XML/SGML: Stephan Schoenig,
-schoenig@cs.cmu.edu
-CSCW: Jane Siegel, jals@cs.cmu.edu
-User Interface: Elaine Hyder, ehyder+@cs.cmu.ed; Jack Moffet jmoffet+@cs.cmu.edu
-CVS/General Help: Eric Stein, es5f+@andrew.cmu.edu
-Lotus Notes: Joyce Johnstone, jdarej@cs.cmu.edu
-ACS: Mark Kramer, mtkramer@nswccd.navy.mil (Possibly Incorrect)
-GCS: Chip Morris, morrisd@mantech-wva.com
-AIMSS: Rob Schwarzberg, reschwarzberg@notes.west.raytheon.com
-Client Acceptance Test
-The client is willing to discuss any of the requirements specified in this document.
-During the requirements analysis phase of the project, the functional and nonfunctional requirements of an acceptable prototype will be re-established.
-The delivery of the working prototype of the STARS system is expected at the end of the semester.
-Deliverables
-The client expects a successful demonstration of the STARS prototype on May 4, 2000 (give or take) in the Software Engineering Lab at Carnegie Mellon University.
-A set of documents on a CD-ROM describing the requirements analysis (RAD), the software project management plan (SPMP), testing procedures (TM) and a user manual of the STARS system will accompany the demonstration.
-Client Responsibilities
-For the successful completion of this project, the cilent will be responsible for the following:
-Working versions of ACS, GCS, and AIMSS that can be integrated together.
-If these are not supplied, we will provide a system into which the missing components can be added upon their completion.
-Attendance at the Requirements Analysis Document (RAD) presentation on February 24, 2000, a final presentation of the system on May 4, 2000, and an intermediate demonstration on a date that is yet to be determined.
-Timely responses to any reasonable questions that may arise during the development of the system.
+Leather hides are given different colour and texture as per customer requirements. Colour is sprayed on the leather using a spray gun. This colour has a standard formula of making, with definite proportion of various chemicals mixed in sequence. 
+
+The chemicals required for making the dye, are stored in small drums with capacity 15-20 kgs. All these chemicals are water-based chemicals in liquid form with different viscosities. All these chemicals are mixed together in a rotating drum to form the colour which is then sprayed on the leather hides using a spray gun. Leather requires 5- 6 layers of different chemical mixes coated using spray gun at different intervals and each coat having different formula and proportion.
+
+Currently, an operator picks up the required chemical from the storage area and weighs as per the chemical formulation requirement mentioned in the SAP system and fed into the rotating drum to make the colour.
+
+This task of picking up chemicals from the storage area, weighing and feeding, is manual in nature and is not efficient as it is prone to errors. Operators tend to miss out a chemical or change the order of feeding chemicals and thereby changing the chemical composition of the colour. This might go unnoticed until the colour is sprayed on the leather. This may lead to rejection of the whole batch of leather hides incurring losses. Therefore, we need an automated process of colour making. This automated process should fulfill the following requirements:
+
+Easy integration with the existing SAP system.
+An automatic system that will take the chemicals from the storage drums.
+Later the chemicals should be weighed as per the requirement prescribed in the SAP system and fed in proper sequence into the rotating drum where they will be mixed to form the desired colour.
+The required individual chemicals should be taken out as per the formulation, stored in separate chemical mix container which also varies based on the quantity of chemical mix required to be prepared (from 10kgs to 1000kgs container).
+The chemical mix prepared for finishing coats as per the production requirement also varies from 10kgs to 500kgs so in that case individual chemicals might be required from 0.1kgs to 500kgs to prepare a chemical mix.
+2 to 10 coats should be prepared for a batch of leather depending upon the product requirements.
+The system should incorporate a washing mechanism to its mixing drum, wherein the drum should be washed after every cycle of chemical mixing.
+The system should be easy to maintain. All parts should be available locally in India.
+The process must be environmentally safe. The system should not generate any fumes in the mixing process and should not affect the PH level of the chemicals.

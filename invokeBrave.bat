@@ -1,0 +1,1 @@
+start brave file:///D:/LAB/pyhton--ml/solverhunt/tkinterdemo/CollectedData/index.html
